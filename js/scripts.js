@@ -9,8 +9,29 @@
         { id: 20, name: 'Kuririn', children: [], parent: null }
     ]
 
-    people.forEach(i => {
-        console.log('Hello')
-    })
+    const addPerson = (e) => {
+        e.preventDefault()
+
+        let person = {
+            id: Date.now(),
+            name: document.getElementById('name').value,
+            children: [],
+            parent: null
+        }
+
+        people.push(person)
+
+        document.forms[0].reset()
+
+        document.getElementById('text-area').value = JSON.stringify(people, '\t', 2)
+    }
+
+    // people.forEach(i => {
+    //     console.log('Hello')
+    // })
 
     document.getElementById('text-area').value = JSON.stringify(people, '\t', 2)
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('add-person').addEventListener('click', addPerson)
+    })
