@@ -2,29 +2,54 @@
 
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datafox | Micro-App</title>
 
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" type="text/css" href="">
-</head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
 
-<body>
+  <body>
     <button>Read DB</button>
     <button>Save DB</button>
     <br><br>
     <form action="" method="POST">
         <input type="text" id="name" placeholder="INSERT A PERSON">
-        <button id="add-person">Insert</button>
+        <button id="add-parent">Insert</button>
     </form>
     <br>
-    <textarea name="" id="text-area" cols="60" rows="20"></textarea>
+    <div class="d-flex">
+        <!-- TABLE -->
+        <div>
+            <table>
+                <thead>
+                  <tr>
+                    <th colspan="2">Name</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                  <tr>
+                    <td>Parent<br><button id="add-child">Add Child</button></td>
+                    <td><button id="remove-parent">Remove</button></td>
+                        <tr>
+                          <td>Child</td>
+                          <td><button id="remove-child">Remove Child</button></td>
+                        </tr>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- TEXTAREA -->
+        <div>
+            <textarea name="" id="text-area" cols="60" rows="20"></textarea>
+        </div>
+    </div>
 
     <!-- JAVASCRIPT -->
     <script src="../js/scripts.js"></script>
-</body>
+  </body>
 
 </html>

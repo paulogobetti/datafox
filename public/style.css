@@ -1,0 +1,22 @@
+th {
+    width: 600px;
+    background: #fd0;
+    padding: 10px;
+}
+
+tr {
+    background: #ccc;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+}
+
+button {
+    padding: 10px 15px;
+}
+
+.d-flex {
+    display: flex;
+}
