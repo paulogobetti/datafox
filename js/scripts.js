@@ -19,7 +19,11 @@
             parent: null
         }
 
-        people.push(person)
+        if(person.name == '') {
+            alert('Oops! Something needs to be filled in here.')
+        } else {
+            people.push(person)
+        }
 
         document.forms[0].reset()
 
